@@ -11,7 +11,7 @@ pipeline {
                 ansiblePlaybook(
                     playbook: './apache.yml',
                     inventory: './hosts',
-                    credentialsId: 'node_root',
+                    credentialsId: 'root_ssh_key',
                     colorized: true
                 )
             }
