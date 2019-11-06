@@ -3,11 +3,12 @@ pipeline {
     stages {
         stage('Print pipeline info') {
             steps {
-                echo "--- Deploying Apache Web Server in server 192.168.120.202"
+                echo "--- Pipeline to deploy Apache Web Server in server 192.168.120.202"
             }
         }//end stage Print pipeline info
         stage('Deploy Apache Web Server'){
             steps{
+                echo "--- Deploying Apache Web Server"
                 ansiblePlaybook(
                     playbook: './apache.yml',
                     inventory: './hosts',
@@ -19,7 +20,7 @@ pipeline {
         }//end stage Deploy Apache Web Server
         stage('Testing'){
             steps{
-                
+                echo "--- Testing"
             }
         }//end stage Testing
         stage('Finish'){
