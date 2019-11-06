@@ -17,6 +17,11 @@ pipeline {
                 )
             }
         }//end stage Deploy Apache Web Server
+        stage('Testing'){
+            steps{
+                
+            }
+        }//end stage Testing
         stage('Finish'){
             steps{
                 echo "--- Deployment finished"
