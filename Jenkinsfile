@@ -12,6 +12,7 @@ pipeline {
                     playbook: './apache.yml',
                     inventory: './hosts',
                     credentialsId: 'root_ssh_key',
+                    disableHostKeyChecking: true,
                     colorized: true
                 )
             }
