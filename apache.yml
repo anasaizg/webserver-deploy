@@ -1,0 +1,13 @@
+---
+- hosts: webserver
+  tasks:
+    - name: install apache web server
+      package:
+        name: httpd
+        state: latest
+
+    - name: start and enable apache web server
+      service:
+        name: httpd
+        state: started
+        enabled: true
