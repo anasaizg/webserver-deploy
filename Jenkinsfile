@@ -21,6 +21,7 @@ pipeline {
         stage('Testing'){
             steps{
                 echo "--- Testing"
+                sh 'py.test -v ./tests/test_apache.py'
             }
         }//end stage Testing
         stage('Finish'){
