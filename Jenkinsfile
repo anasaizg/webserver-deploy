@@ -21,7 +21,7 @@ pipeline {
         stage('Testing'){
             steps{
                 echo "--- Testing"
-                sh 'execute_test.sh'
+                sh 'py.test -v ./tests/test_apache.py --junit-xml=test_apache.xml'
                 junit 'test_apache.xml' //record test result
             }
         }//end stage Testing
