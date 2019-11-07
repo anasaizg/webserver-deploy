@@ -12,4 +12,4 @@ def test_index():
     url = 'http://192.168.120.202/'
     resp = requests.get(url)
     body = resp.content
-    assert body == "<H1>WEBSERVER RUNNING</H1>"
+    assert body == "<H1>SERVER RUNNING</H1>"
